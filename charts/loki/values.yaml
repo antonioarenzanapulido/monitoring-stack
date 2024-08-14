@@ -1,0 +1,60 @@
+backend:
+  replicas: 0
+bloomCompactor:
+  replicas: 0
+bloomGateway:
+  replicas: 0
+chunksCache:
+  enabled: false
+  writebackSizeLimit: 10MB
+compactor:
+  replicas: 0
+deploymentMode: SingleBinary
+distributor:
+  replicas: 0
+indexGateway:
+  replicas: 0
+ingester:
+  replicas: 0
+loki:
+  commonConfig:
+    replication_factor: 1
+  ingester:
+    chunk_encoding: snappy
+  querier:
+    max_concurrent: 2
+  schemaConfig:
+    configs:
+      - from: "2024-04-01"
+        index:
+          period: 24h
+          prefix: loki_index_
+        object_store: s3
+        schema: v13
+        store: tsdb
+  tracing:
+    enabled: true
+minio:
+  enabled: true
+querier:
+  replicas: 0
+queryFrontend:
+  replicas: 0
+queryScheduler:
+  replicas: 0
+read:
+  replicas: 0
+singleBinary:
+  extraEnv:
+    - name: GOMEMLIMIT
+      value: 3750MiB
+  replicas: 1
+  resources:
+    limits:
+      cpu: 3
+      memory: 4Gi
+    requests:
+      cpu: 2
+      memory: 2Gi
+write:
+  replicas: 0
