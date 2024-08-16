@@ -12,10 +12,10 @@ image:
   # -- Image repository
   repository: parity/polkadot
   # -- Image tag
-  tag: latest
+  tag: v1.15.1
 
   # -- Image digest, invalidates tag value
-  digest: sha256:80be82c79349c5f40ddfc81f0ed43cf61cefaf273a22eb2e52498a2e215ea5de
+  digest: #sha256:80be82c79349c5f40ddfc81f0ed43cf61cefaf273a22eb2e52498a2e215ea5de
 
   # -- Image pull policy
   pullPolicy: Always
