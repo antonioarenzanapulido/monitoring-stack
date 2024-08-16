@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: polkadot
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: polkadot
+  project: default
+  source:
+    path: node/
+    repoURL: {{ .Values.repository }}
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
