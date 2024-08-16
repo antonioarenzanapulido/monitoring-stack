@@ -15,7 +15,7 @@ image:
   tag: latest
 
   # -- Image digest, invalidates tag value
-  digest: sha256:8bc39c8a98eef9d063241ad0f8527ef7922794757edd30da2e3308f720bd1b61
+  digest: sha256:80be82c79349c5f40ddfc81f0ed43cf61cefaf273a22eb2e52498a2e215ea5de
 
   # -- Image pull policy
   pullPolicy: Always
