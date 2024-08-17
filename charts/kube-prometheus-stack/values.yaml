@@ -1,3 +1,19 @@
 prometheus:
   prometheusSpec:
     serviceMonitorSelector: {}
+
+grafana:
+  additionalDataSources:
+    - name: Loki
+      access: proxy
+      editable: false
+      jsonData:
+        httpHeaderName1: 'X-Scope-OrgID'
+        tlsSkipVerify: true
+      secureJsonData:
+        httpHeaderValue1: 'test'
+      orgId: 1
+      type: loki
+      url: https://loki:3100
+      version: 1
+        
