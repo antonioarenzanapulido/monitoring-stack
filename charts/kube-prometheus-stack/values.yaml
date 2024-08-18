@@ -9,6 +9,8 @@ prometheus:
     podMonitorSelectorNilUsesHelmValues: false
     probeSelectorNilUsesHelmValues: false
 
+# Minikube Monitoring
+# https://github.com/prometheus-community/helm-charts/issues/3614#issuecomment-2088168904
 kubelet:
   cAdvisorMetricRelabelings: []
 
