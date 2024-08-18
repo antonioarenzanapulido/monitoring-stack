@@ -3,6 +3,12 @@ prometheus:
     serviceMonitorSelector: {}
     serviceMonitorNamespaceSelector: {}
 
+    # https://github.com/prometheus-operator/kube-prometheus/issues/1392#issuecomment-1411719953
+    ruleSelectorNilUsesHelmValues: false
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    probeSelectorNilUsesHelmValues: false
+
 grafana:
   additionalDataSources:
     - name: Loki
