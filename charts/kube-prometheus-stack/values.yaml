@@ -9,6 +9,9 @@ prometheus:
     podMonitorSelectorNilUsesHelmValues: false
     probeSelectorNilUsesHelmValues: false
 
+kubelet:
+  cAdvisorMetricRelabelings: []
+
 grafana:
   additionalDataSources:
     - name: Loki
