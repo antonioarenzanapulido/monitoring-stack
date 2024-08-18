@@ -58,3 +58,6 @@ singleBinary:
       memory: 2Gi
 write:
   replicas: 0
+
+serviceMonitor:
+  enabled: true
