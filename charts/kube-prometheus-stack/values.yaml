@@ -1,6 +1,7 @@
 prometheus:
   prometheusSpec:
     serviceMonitorSelector: {}
+    serviceMonitorNamespaceSelector: {}
 
 grafana:
   additionalDataSources:
