@@ -33,7 +33,7 @@ var (
 )
 
 func main() {
-	http.HandleFunc("/endpoint", withMetrics(errorRateHandler))
+	http.HandleFunc("/", withMetrics(errorRateHandler))
 	http.Handle("/metrics", promhttp.Handler())
 
 	fmt.Println("Starting server on :8080")
