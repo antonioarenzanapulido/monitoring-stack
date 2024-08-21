@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: localhost:5000/test-app
+  repository: localhost:5000/go-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 3
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
