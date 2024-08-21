@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: test-app
+  repository: localhost:5000/test-app:3
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 1
+  tag: 3
 
 imagePullSecrets: []
 nameOverride: ""
